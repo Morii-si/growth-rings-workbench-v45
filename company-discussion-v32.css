@@ -1,0 +1,55 @@
+/* A company has two destinations: its live discussion and its saved boards. */
+.company-main-tabs{display:flex;gap:32px;border-bottom:1px solid #d9d0c1;margin-top:8px}
+.rail .company-main-tabs button{display:flex;align-items:center;gap:8px;padding:14px 0;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;font:500 14px/1.8 var(--font-ui);color:#746955}
+.rail .company-main-tabs button[aria-current=page]{color:#342e28;border-bottom-color:#b69a46}
+.company-main-tabs button>span{font:400 11px/1.5 var(--font-ui);color:#746955;background:#ece7dc;padding:1px 6px;border-radius:3px}
+.rail .company-round-heading .stage-tools:empty{display:none}
+.history-board-picker{display:flex;align-items:center;gap:14px;margin-top:24px;font:400 12px/1.8 var(--font-ui);color:#776b59;flex-wrap:wrap}
+.rail .history-board-picker>label{width:auto;display:inline;margin:0;white-space:nowrap}
+.rail .history-board-picker select{width:auto;min-width:260px;max-width:100%;margin:0;padding:8px 12px;font:400 13px/1.8 var(--font-ui);border:1px solid #d1c4aa;background:#fffdf8;border-radius:4px;color:#40382d}
+.rail .discussion-home .room-work-grid{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:32px}
+.rail .discussion-home .room-conversation{position:sticky;top:20px}
+.discussion-home .room-live-dialogue{max-height:clamp(280px,40dvh,480px);min-height:180px}
+.room-generation-column{min-width:0}
+.room-generation{padding:24px;background:#fffdf8;border:1px solid #ddd3c2;scroll-margin-top:24px}
+.room-generation>header{padding-bottom:20px;border-bottom:1px solid #ddd3c2;margin-bottom:20px}
+.rail .room-generation h2{font:600 19px/1.5 var(--font-research);margin:0;color:#342e28}
+.room-generation>header p,.generation-selection>p{font:400 12px/1.8 var(--font-ui);color:#746955;margin:8px 0 0}
+.generation-source{background:#e9edf5;padding:14px 16px;margin-bottom:18px;color:#3d5577}
+.generation-source>span{font:400 11px/1.8 var(--font-ui);margin-right:10px}.generation-source>strong{font:500 12px/1.8 var(--font-ui)}
+.rail .generation-source>p{font:400 13px/1.9 var(--font-ui);margin:8px 0 0;color:inherit}
+.rail .generation-scope{display:flex;align-items:center;justify-content:space-between;gap:20px;font:400 12px/1.8 var(--font-ui);margin-bottom:22px;color:#6c604e}
+.rail .generation-scope select{width:auto;min-width:135px;margin:0;font:400 12px/1.8 var(--font-ui);padding:8px 12px;border:1px solid #d1c4aa;border-radius:4px;background:#fffdf8;color:#40382d}
+.rail .generation-selection h3{font:600 14px/1.7 var(--font-ui);margin:0}
+.rail .generation-selection .room-task{padding:18px 0;border-top:0;border-bottom:1px solid #e4dccd}
+.rail .generation-selection .room-task-title h3{font:500 14px/1.7 var(--font-ui)}
+.generation-selection .room-task-title input{width:16px;height:16px;flex-shrink:0}
+.rail .generation-selection .room-task>p{font:400 13px/1.85 var(--font-ui);margin:8px 0}
+.rail .generation-selection .room-task-origin{font:400 11px/1.8 var(--font-ui)}
+.rail #room-generate-form{max-width:none;padding:0;margin:20px 0 0;background:transparent;border:0;display:block}
+#room-generate-form label{display:block;font:500 12px/1.8 var(--font-ui);margin:14px 0 8px}
+.rail #room-generate-form textarea{width:100%;max-width:none;min-height:64px;padding:10px 12px;font:400 13px/1.85 var(--font-ui);border:1px solid #d1c4aa;border-radius:4px;resize:vertical;background:#fffefb;color:#343434}
+.generation-summary-edit>summary{font:400 12px/1.8 var(--font-ui);cursor:pointer;color:#6c604e}
+.generation-footer{padding-top:14px}.generation-footer p,.generation-footer small{font:400 11px/1.8 var(--font-ui);color:#746955;margin:0 0 12px;display:block}
+.rail .generation-footer button.room-primary{width:100%;justify-content:center;padding:12px;font:600 13px/1.8 var(--font-ui);border-radius:5px}
+.rail .generation-footer button:disabled{opacity:.5;cursor:not-allowed}
+.generation-footer .room-link{display:block;margin:12px auto 0}
+.company-longterm{margin-top:20px;border-top:1px solid #d9d0c1;padding-top:8px}
+.company-longterm>summary{display:flex;justify-content:space-between;padding:12px 0;font:500 13px/1.8 var(--font-ui);cursor:pointer;color:#574d3b}
+.company-longterm>summary>span{font:400 11px/1.8 var(--font-ui);color:#746955}
+.rail .company-longterm .followup-track{display:block;padding:18px 0}.company-longterm .followup-track>div{margin-top:12px}
+.company-longterm .future-column-head{display:none}
+.rail .company-longterm :is(.followup-fields,.task-rule-fields){display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.rail .company-longterm :is(h2,h3){font-size:16px}.company-longterm :is(input,textarea,select){max-width:100%}
+.generated-board-summary{background:#fffdf8;border:1px solid #d9d0c1;padding:24px;margin-bottom:28px}
+.generated-board-summary>header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.rail .generated-board-summary h2{font:600 19px/1.5 var(--font-research);margin:0}
+.generated-board-summary>header>span,.generated-board-summary>footer>span{font:400 11px/1.8 var(--font-ui);color:#746955}
+.rail .generated-takeaway{font:400 18px/1.85 var(--font-research);color:#40382d;margin:0 0 20px}
+.generated-next{background:#f4efd9;padding:12px 16px;display:flex;gap:18px;align-items:baseline;margin-bottom:20px}
+.generated-next strong{font:500 12px/1.8 var(--font-ui);white-space:nowrap}.generated-next p{font:400 13px/1.8 var(--font-ui);margin:0}
+.generated-board-summary h3{font:500 14px/1.8 var(--font-ui)}
+.generated-board-summary .room-task{padding:16px 0}
+.generated-board-summary>footer{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #e4dccd;padding-top:18px;margin-top:18px}
+@media(max-width:1000px){.rail .discussion-home .room-work-grid{grid-template-columns:minmax(0,1fr);gap:24px}.rail .discussion-home .room-conversation{position:static}.discussion-home .room-live-dialogue{max-height:360px}}
+@media(max-width:600px){.company-main-tabs{gap:24px}.rail .company-main-tabs button{font-size:13px}.room-generation{padding:18px}.history-board-picker{gap:8px}.history-board-picker select{min-width:0;width:100%}.generated-board-summary{padding:18px}.generated-board-summary>header,.generated-board-summary>footer{align-items:start;flex-direction:column}.generated-next{display:block}.generated-next p{margin-top:6px}}

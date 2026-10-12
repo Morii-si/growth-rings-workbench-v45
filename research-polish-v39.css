@@ -1,0 +1,37 @@
+/* V39: quieter home cards, warm navigation controls, one assistant identity. */
+.rail .room-home .room-welcome{align-items:center}
+
+.rail .research-chat-page .chat-topbar nav{gap:8px}
+.rail .research-chat-page .chat-nav-button{
+ display:inline-flex;align-items:center;justify-content:center;gap:5px;
+ min-height:35px;padding:7px 12px;border:1px solid #d7c6a6;border-radius:9px;
+ background:#e8dcc2;color:#594529;text-decoration:none;font-weight:500;
+ box-shadow:none;transition:background .16s,border-color .16s;
+}
+.rail .research-chat-page .chat-nav-button:hover{background:#deccaa;border-color:#c7ad7b;color:#49371e}
+.research-chat-page .chat-nav-button .chat-icon{opacity:.7}
+
+/* Use the same logo crop as the chat brand and historical assistant messages. */
+.research-chat-page .chat-avatar,
+.research-chat-page .chat-welcome-identity .chat-avatar{
+ background:none;border:0;border-radius:0;box-shadow:none;
+}
+.research-chat-page .chat-avatar .chat-brand-avatar{
+ display:block;width:100%;height:100%;max-width:none;object-fit:contain;
+ filter:none;opacity:1;
+}
+
+@media(max-width:600px){
+ .rail .research-chat-page .chat-topbar{gap:9px;padding-inline:12px}
+ .rail .research-chat-page .chat-topbar nav{gap:5px}
+ .rail .research-chat-page .chat-nav-button{min-height:34px;padding:7px 9px;font-size:11px;gap:3px;border-radius:8px}
+ .research-chat-page .chat-nav-button .chat-icon{width:12px;height:12px}
+ .research-chat-page .chat-topic{margin-right:auto}
+}
+@media(max-width:370px){
+ .research-chat-page .chat-topic{display:none}
+ .rail .research-chat-page .chat-topbar nav{margin-left:auto}
+}
+@media(prefers-reduced-motion:reduce){
+ .rail .research-chat-page .chat-nav-button{transition:none}
+}

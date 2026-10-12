@@ -1,0 +1,161 @@
+/* Local v19: question-led reading, with the original research desk intact. */
+.rail .rail-workspace{max-width:1540px;padding-inline:40px}
+.rail .topbar{height:58px;padding-inline:40px}
+.rail .company-head{padding:15px 0;margin-bottom:0;border-bottom:1px solid var(--line)}
+.rail .company-head>div{display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.rail .company-head h1{font-size:29px}
+.rail .company-head p{margin:0;font-size:15px;font-weight:400}
+.rail .company-head h1 span{font-size:11px}
+.rail .stage-nav{margin:12px 0;height:auto;min-height:30px;padding:0;background:var(--bg)}
+.rail .stage-nav>strong{font-size:22px;letter-spacing:0}
+.rail .canvas .time-section{border:0;border-bottom:1px solid var(--line);margin:0 0 16px;background:transparent}
+.rail .time-node{padding:7px 16px 9px;min-width:160px;flex-basis:160px;border-top:0;border-bottom:2px solid transparent;border-right:0}
+.rail .time-node .time-line{display:none}
+.rail .time-node strong{font-size:13px;margin:6px 0 4px}
+.rail .time-node small{font-size:10px}
+.rail .time-node.active{background:#e9edf4;border-bottom-color:var(--blue)}
+.rail .time-node.future{min-width:160px;background:transparent}
+.rail .time-node.future.active{background:#f1e6bd;border-bottom-color:var(--mustard)}
+.rail .research-stage-divider{display:none}
+.rail .board-heading{padding:0;border:0;margin-bottom:16px;align-items:center}
+.rail .board-heading>div{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.rail .board-heading h2{font:500 13px/1.6 "PingFang SC",sans-serif;color:#675e54}
+.rail .board-heading p{margin:0;font-size:11px;color:#675e54}
+.rail .board-heading>span{font-size:10px;padding:3px 8px}
+.rail .board-heading.is-future{margin:30px 0 22px}
+.rail .board-heading.is-future h2{font:600 28px/1.4 "Songti SC","STSong",serif}
+.research-focus{background:#fffdf8;border-top:1px solid #b5aa9c;margin-bottom:24px;color:#322d2b;scroll-margin-top:24px}
+.focus-topics{display:flex;border-bottom:1px solid #ded6ca;padding:0 30px;gap:36px}
+.rail .focus-topics button{display:flex;align-items:baseline;gap:12px;padding:16px 0 14px;border:0;border-bottom:2px solid transparent;background:none;cursor:pointer;text-align:left;border-radius:0;color:#72685e;font:500 14px/1.6 "PingFang SC",sans-serif}
+.focus-topics button small{font-size:11px;font-weight:400}
+.rail .focus-topics button[aria-pressed=true]{border-bottom-color:#9c7f26;color:#322d2b}
+.rail .focus-topics button[aria-pressed=true] span{font-weight:650}
+.rail .focus-topics button:hover{color:#322d2b;background:none;border-bottom-color:#c6a84f}
+.focus-spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:46px;padding:26px 30px}
+.focus-lead{display:flex;flex-direction:column;align-items:flex-start}
+.rail .focus-lead h2{font:600 36px/1.38 "Songti SC","STSong",serif;color:#322d2b;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+.focus-description{font:14px/1.9 "PingFang SC",sans-serif;color:#675e54;max-width:34em;margin:0 0 20px}
+.focus-next{margin-top:0;width:100%}
+.focus-next>span{font:12px/1.6 "PingFang SC",sans-serif;color:#756b5c}
+.focus-next>p{font:500 15px/1.8 "PingFang SC",sans-serif;margin:4px 0 16px}
+.rail .focus-start{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:44px;padding:11px 18px;border:1px solid #c6a84f;border-radius:4px;background:#c6a84f;color:#29291f;font:600 13px/1.6 "PingFang SC",sans-serif;cursor:pointer}
+.rail .focus-start:hover{background:#d2b762;border-color:#b49538}
+.focus-start svg,.focus-memory button svg,.focus-foot button svg{width:18px;height:18px;flex-shrink:0}
+.focus-next>small{display:block;margin-top:9px;font:11px/1.7 "PingFang SC",sans-serif;color:#756b5c}
+.focus-context{border-left:1px solid #ded6ca;padding-left:30px;min-width:0}
+.focus-memory>header,.focus-evidence>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font:12px/1.6 "PingFang SC",sans-serif}
+.focus-memory>header>strong,.focus-evidence>header>strong{font-weight:600}
+.focus-memory>header>span,.focus-evidence>header>span{font-size:11px;color:#756b5c}
+.focus-memory blockquote{padding:0;margin:10px 0 7px;border:0;font:500 16px/1.65 "PingFang SC",sans-serif;color:#322d2b}
+.focus-memory>p{font:13px/1.8 "PingFang SC",sans-serif;color:#675e54;margin:0 0 7px}
+.rail .focus-memory button,.rail .focus-foot button{display:inline-flex;align-items:center;gap:10px;border:0;background:none;border-radius:0;font:12px/1.7 "PingFang SC",sans-serif;color:#64542c;padding:4px 0;cursor:pointer;text-align:left}
+.rail .focus-memory button:hover,.rail .focus-foot button:hover{text-decoration:underline;text-underline-offset:5px;background:none}
+.focus-evidence{margin-top:16px;padding:15px 18px;background:#edf0f5;border-radius:0;border:0}
+.focus-evidence>header{color:#3c526f}
+.focus-evidence>header>span{color:#506582}
+.focus-evidence>p{font:13px/1.85 "PingFang SC",sans-serif;color:#3c526f;margin:10px 0}
+.focus-evidence>a{font:11px/1.7 "PingFang SC",sans-serif;color:#3c526f;text-underline-offset:4px}
+.focus-amounts{margin-top:13px}
+.focus-amounts>span{font:11px/1.6 "PingFang SC",sans-serif;color:#506582}
+.focus-amounts>div{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:3px 0 5px}
+.focus-amounts strong{font:400 27px/1.25 Georgia,serif;font-variant-numeric:tabular-nums;color:#314664}
+.focus-amounts svg{width:22px;height:16px;color:#6d86b3}
+.focus-amounts small{font:11px/1.6 "PingFang SC",sans-serif;color:#506582}
+.focus-amounts b{font:500 12px/1.6 "PingFang SC",sans-serif;color:#3c526f;margin-left:auto}
+.focus-foot{border-top:1px solid #ded6ca;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 30px}
+.focus-foot>p{margin:0;font:11px/1.8 "PingFang SC",sans-serif;color:#756b5c}
+.research-snapshot{margin:0 0 30px;border-block:1px solid #d8cfc1;scroll-margin-top:20px}
+.research-snapshot>summary{display:flex;gap:16px;align-items:center;cursor:pointer;padding:16px 4px;list-style:none;font:500 15px/1.6 "PingFang SC",sans-serif;color:#322d2b}
+.research-snapshot>summary::-webkit-details-marker{display:none}
+.research-snapshot>summary>small{font-size:12px;color:#756b5c;font-weight:400}
+.snapshot-toggle{margin-left:auto;width:10px;height:10px;border-bottom:1px solid #756b5c;border-right:1px solid #756b5c;transform:rotate(45deg);transition:transform .18s ease-out;margin-right:6px}
+.research-snapshot[open] .snapshot-toggle{transform:rotate(225deg)}
+.rail .research-snapshot .research-thread{margin:0 0 20px}
+.rail .research-snapshot .judgment-summary{margin:0 0 20px}
+.rail .research-snapshot .rw-next-question{display:none}
+#full-research-board{scroll-margin-top:24px;outline:none}
+.rail .assistant-shell{box-shadow:0 8px 28px #322d2b12}
+.rail .assistant-shell .assistant-head{background:#f4efd9}
+.rail .rail-workspace:has(.rail-columns.with-assistant) .company-head{margin-right:0}
+.rail .rail-columns.with-assistant>.assistant-shell{right:max(40px,calc((100vw - 1540px)/2 + 40px))}
+.rail .focus-topics button:focus-visible,.rail .focus-start:focus-visible,.research-snapshot>summary:focus-visible{outline:2px solid #8f752b;outline-offset:4px}
+@container (max-width:1050px){
+ .focus-topics{gap:24px;padding-inline:24px}.focus-topics button small{display:none}
+ .focus-spread{gap:28px;padding:24px}.focus-context{padding-left:24px}
+ .rail .focus-lead h2{font-size:32px}.focus-amounts b{margin-left:0}
+}
+@container (max-width:740px){
+ .focus-spread{grid-template-columns:1fr;gap:28px}.focus-context{padding-left:0;border-left:0;border-top:1px solid #ded6ca;padding-top:24px}
+ .focus-description{max-width:none;margin-bottom:20px}.focus-foot{align-items:flex-start;flex-direction:column;gap:6px}
+}
+@media(max-width:700px){
+ .rail .topbar{height:60px;padding-inline:18px}.rail .rail-workspace{padding-inline:18px}
+ .rail .company-head{padding:18px 0}.rail .company-head>div{gap:10px}
+ .rail .company-head h1{font-size:27px}.rail .company-head p{font-size:14px;line-height:1.8}
+ .rail .stage-nav{margin:16px 0 12px}.rail .stage-nav>strong{font-size:19px}
+ .rail .stage-nav>.stage-tools{gap:6px}.rail .stage-nav>.stage-tools>button{font-size:11px;min-height:36px;padding:5px 7px}
+ .rail .time-node{min-width:145px;padding:10px 12px}.rail .time-node.future{min-width:145px}
+ .rail .board-heading>div{gap:4px 10px}.rail .board-heading p{font-size:10px}
+ .rail .focus-topics{padding:0 16px;gap:18px}.rail .focus-topics button{font-size:12px;min-height:48px;white-space:nowrap}
+ .focus-topics button small{display:none}.focus-spread{padding:24px 20px;grid-template-columns:1fr;gap:25px}
+ .rail .focus-lead h2{font-size:29px}.focus-description{font-size:13px;margin-bottom:20px}
+ .focus-context{padding:22px 0 0;border-left:0;border-top:1px solid #ded6ca}
+ .focus-memory blockquote{font-size:16px}.focus-memory button{min-height:36px}
+ .focus-evidence{padding:16px}.focus-amounts>div{gap:10px}.focus-amounts b{margin-left:0}
+ .focus-start{width:100%}.focus-next>small{font-size:10px}.focus-foot{padding:14px 20px;flex-direction:column;align-items:flex-start;gap:8px}
+ .focus-foot button{min-height:36px}.research-snapshot>summary{flex-wrap:wrap;gap:5px 12px}
+ .research-snapshot>summary>small{font-size:11px}.research-snapshot>summary>span:first-child{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.snapshot-toggle{transition:none}}
+
+/* Keep the unresolved question useful now, or leave a precise place to resume. */
+.focus-memory .focus-memory-takeaway{background:#f2ecd4;color:#423d2f;padding:9px 12px;margin:10px 0 7px;font-size:13px}
+.focus-memory-actions{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.focus-relevance{font:11px/1.8 "PingFang SC",sans-serif;color:#675e54}
+.focus-relevance summary{cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:4px 0}
+.focus-relevance[open]{flex-basis:100%}.focus-relevance p{margin:7px 0 3px;font-size:12px;max-width:52em}
+.focus-evidence-actions{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.focus-evidence-actions a,.rail .focus-evidence-actions button{font:11px/1.8 "PingFang SC",sans-serif;color:#3c526f;text-underline-offset:4px}
+.rail .focus-evidence-actions button{border:0;background:none;cursor:pointer;padding:5px 0;text-decoration:underline}
+.rail .focus-evidence-actions button:hover{background:none;color:#263d5d}
+.focus-action-row{display:flex;gap:12px 22px;align-items:center;flex-wrap:wrap}
+.rail .focus-later{display:flex;gap:8px;align-items:center;background:none;border:0;border-radius:0;padding:10px 0;margin:0;font:12px/1.8 "PingFang SC",sans-serif;color:#655b45;cursor:pointer;text-align:left}
+.focus-later svg{height:16px;width:16px}.rail .focus-later:hover{background:none;text-decoration:underline;text-underline-offset:4px}
+.focus-kept{margin-top:20px;padding:12px 0 0;border-top:1px solid #ded6ca;font:12px/1.8 "PingFang SC",sans-serif}
+.focus-kept>span{color:#756026;font-weight:600}.focus-kept p{margin:6px 0;color:#423d2f;max-width:40em;overflow-wrap:anywhere;white-space:pre-wrap}
+.rail .focus-kept button{font:12px/1.8 "PingFang SC",sans-serif;border:0;background:none;color:#655b45;padding:4px 0;margin-right:16px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.rail .focus-return-form{padding:16px 18px;margin:12px 0 0;width:100%;max-width:none;background:#f5f0dd;border:0;border-radius:0;color:#322d2b}
+.rail .focus-return-form label{display:block;font:500 12px/1.8 "PingFang SC",sans-serif;margin:0 0 7px;color:#423d2f}
+.rail .focus-return-form textarea,.rail .focus-return-form select{width:100%;max-width:none;background:#fffdf8;border:1px solid #cfc5ad;border-radius:4px;padding:9px 10px;font:13px/1.8 "PingFang SC",sans-serif;color:#322d2b;margin:0 0 12px}
+.rail .focus-return-form textarea{min-height:92px;resize:vertical}.rail .focus-return-form select{min-height:40px}
+.focus-return-form>p{font:11px/1.8 "PingFang SC",sans-serif;color:#6e6246;margin:0 0 14px}
+.focus-return-form>div{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.rail .focus-return-form button{font:12px/1.8 "PingFang SC",sans-serif;border:0;background:none;color:#655b45;padding:8px 0;cursor:pointer}
+.rail .focus-return-form button[type=submit]{background:#c6a84f;color:#29291f;padding:9px 13px;border-radius:4px;font-weight:600}
+.rail .focus-return-form button[type=submit]:hover{background:#d2b762}
+.rail .focus-return-form .return-error{color:#9c342d;margin:12px 0 0}
+.rail .focus-return-form :is(textarea,select,button):focus-visible,.rail .return-entry :is(button,input):focus-visible{outline:2px solid #9c7f26;outline-offset:3px}
+.focus-return-form textarea{caret-color:#8f752b}
+.research-returns{margin:0 0 30px;padding:22px 26px;background:#fffdf8;border-top:2px solid #c6a84f;color:#322d2b}
+.research-returns>header{display:flex;align-items:baseline;gap:20px;justify-content:space-between;margin-bottom:18px}
+.rail .research-returns h2{font:600 23px/1.5 "Songti SC","STSong",serif;color:#322d2b;margin:0}
+.research-returns>header p{font:12px/1.8 "PingFang SC",sans-serif;color:#756b5c;margin:0}
+.return-entry{padding:16px 0;border-top:1px solid #ded6ca;scroll-margin-top:25px}
+.return-entry>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;font:12px/1.8 "PingFang SC",sans-serif;color:#756026}
+.return-entry>header>span:last-child{font-size:11px;color:#756b5c}
+.rail .return-entry h3{font:500 16px/1.85 "PingFang SC",sans-serif;color:#322d2b;margin:8px 0 12px;max-width:64em;white-space:pre-wrap;overflow-wrap:anywhere}
+.return-entry details>summary,.return-completed>summary{font:12px/1.8 "PingFang SC",sans-serif;color:#756b5c;cursor:pointer;padding:5px 0}
+.return-ref{padding:12px 15px;margin:10px 0;background:#f5f2e8;font:12px/1.9 "PingFang SC",sans-serif;color:#423d2f}
+.return-ref p{margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}.return-ref strong{font-weight:500;color:#756026}
+.return-entry footer{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap;margin-top:14px}
+.rail .return-entry footer button{border:0;background:none;color:#655b45;font:12px/1.8 "PingFang SC",sans-serif;padding:7px 0;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.rail .return-entry footer button:first-child{padding:9px 14px;background:#c6a84f;color:#29291f;border-radius:4px;text-decoration:none;font-weight:600}
+.return-entry footer label{margin:0 0 0 auto;display:flex;gap:7px;align-items:center;cursor:pointer;font:12px/1.8 "PingFang SC",sans-serif;color:#756b5c}
+.rail .return-entry input{accent-color:#9c7f26}.return-empty{font:13px/1.9 "PingFang SC",sans-serif;color:#756b5c}
+@media(max-width:700px){
+ .focus-memory-actions{gap:8px}.rail .focus-later{min-height:44px}
+ .rail .focus-return-form{padding:14px}.rail .focus-return-form textarea{font-size:16px}
+ .research-returns{padding:18px}.research-returns>header{display:block}.research-returns>header p{margin-top:5px}
+ .rail .research-returns h2{font-size:21px}.return-entry footer{gap:10px 16px}
+ .return-entry footer label{margin-left:0;min-height:36px}
+}

@@ -1,0 +1,54 @@
+/* Gray carries prior context, blue marks new disclosure, gold marks discussion. */
+.rail .room-provenance .room-memory-control summary .room-prior-preview{display:block;font:400 12px/1.9 var(--font-ui);color:#5d5548;margin:8px 0 0}
+.room-source.source-historical{background:#f2f0eb}.room-source.source-disclosure{background:#eaf0f5}
+.room-directions{margin:0 0 26px;padding:0 0 20px;border-bottom:1px solid #d8cfc1}
+.room-directions>header{display:flex;align-items:baseline;gap:20px;margin-bottom:14px}
+.rail .room-directions h2{font:500 18px/1.6 var(--font-research);color:#3d372f;margin:0}
+.room-directions>header>span{font:400 12px/1.8 var(--font-ui);color:#70634f}
+.direction-group{display:flex;gap:20px;align-items:start;margin-top:10px}
+.rail .direction-group h3{font:400 12px/1.8 var(--font-ui);color:#675d50;width:116px;flex-shrink:0;margin:7px 0}
+.direction-group>div{display:flex;flex-wrap:wrap;gap:8px;flex:1}
+.rail .direction-group button{border:1px solid #d9d0bf;background:#fffdf8;border-radius:4px;padding:7px 12px;color:#4f493e;font:400 13px/1.6 var(--font-ui);display:flex;align-items:center;gap:8px;min-height:36px}
+.rail .direction-group button:hover{background:#f6f0df;border-color:#baa770}
+.rail .direction-group button[aria-pressed=true]{border-color:#9d8134;background:#eee3b9;color:#493d20;font-weight:600}
+.direction-group button small{font:400 11px/1.5 var(--font-ui);color:#645330}
+.rail .discussion-home .room-work-grid{grid-template-columns:minmax(0,1.35fr) minmax(300px,.9fr);align-items:start;gap:28px}
+.rail .discussion-home .room-conversation{position:static;min-width:0}
+.rail .room-conversation>header>span{font:400 11px/1.8 var(--font-ui);color:#6c604e}
+.rail .company-chat-topic{font:600 17px/1.65 var(--font-research);margin:0 0 16px;white-space:normal}
+.room-provenance{margin:0 0 22px}
+.rail .room-provenance .room-memory-control{margin:0;background:#f2f0eb;border:0;border-radius:0;padding:12px 14px}
+.rail .room-provenance .room-memory-control>summary{font:400 12px/1.8 var(--font-ui);padding:0;color:#5f584e;cursor:pointer}
+.room-provenance .room-memory-control summary strong{font-weight:500;margin-right:12px}
+.rail .room-provenance .room-memory-control summary span{font:400 11px/1.8 var(--font-ui);color:#6e665a;margin:0}
+.rail .room-provenance .room-memory-control>p{font:400 12px/1.9 var(--font-ui);color:#5c554b;margin:10px 0 0}
+.rail .room-provenance .room-memory-control .gr-quoted-discussion{padding:0;background:transparent;margin-top:12px;border-top:1px solid #dad5cb}
+.rail .room-provenance .room-memory-control blockquote{font:400 12px/1.9 var(--font-ui);color:#5a5245;margin:10px 0}
+.rail .room-provenance .room-memory-control label{font:400 12px/1.8 var(--font-ui);padding:10px 0 0;margin:8px 0 0}
+.room-new-evidence{background:#eaf0f5;padding:14px;margin-top:8px;color:#3e536b}
+.room-new-evidence>div{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font:400 11px/1.8 var(--font-ui)}
+.room-new-evidence strong{font:500 12px/1.8 var(--font-ui)}
+.rail .room-new-evidence>p{font:400 13px/1.9 var(--font-ui);color:inherit;margin:8px 0}
+.room-new-evidence>a{font:400 11px/1.8 var(--font-ui);color:#405d7c;text-decoration:underline;text-underline-offset:3px}
+.room-current-divider{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 16px;margin-bottom:18px;border-bottom:1px solid #e3d9c4;font:400 11px/1.8 var(--font-ui);color:#74634c}
+.room-current-divider strong{font:500 12px/1.8 var(--font-ui);color:#51452f}
+.discussion-home .room-live-dialogue{max-height:420px;min-height:0;overflow-y:auto;padding-right:10px;scrollbar-color:#bfb198 transparent;scrollbar-width:thin;overscroll-behavior:contain}
+.room-prompt-list{border-top:1px solid #e2d9c7;padding:16px 0 10px;margin-top:12px}
+.room-prompt-list>span{display:block;font:400 11px/1.8 var(--font-ui);color:#6f614d;margin-bottom:7px}
+.rail .room-prompt-list button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;border:0;border-radius:0;border-bottom:1px solid #eee8da;background:transparent;padding:9px 0;font:400 12px/1.8 var(--font-ui);color:#574722;min-height:38px}
+.room-prompt-list button svg{flex-shrink:0;width:15px;height:15px}
+.rail .room-prompt-list button:hover{color:#32290f;background:#f8f4e8}
+.rail .room-case-note{font:400 11px/1.8 var(--font-ui);color:#756854;margin:12px 0 0}
+.rail .room-generation h2{font-size:18px}
+.generation-basket{padding-top:22px}
+.rail .generation-basket h3{font:500 13px/1.8 var(--font-ui);margin:0 0 10px;color:#504634}
+.generation-basket ul{list-style:none;padding:0;margin:0}
+.generation-basket li{display:flex;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #e8e0d1}
+.rail .generation-basket li>.room-link{font:400 12px/1.8 var(--font-ui);text-align:left;display:block;padding:0;flex:1;white-space:normal}
+.generation-basket li>.room-link>span{font:400 10px/1.8 var(--font-ui);color:#756854;display:block}
+.rail .generation-basket li>button:last-child{border:0;background:transparent;font:400 11px/1.8 var(--font-ui);color:#70624d;padding:6px 0;flex-shrink:0;text-decoration:underline;text-underline-offset:3px}
+.rail .generation-basket>p{font:400 12px/1.8 var(--font-ui);color:#756854;margin:0}
+.room-directions button:focus-visible,.room-prompt-list button:focus-visible,.generation-basket button:focus-visible,.room-provenance summary:focus-visible{outline:2px solid #947a30;outline-offset:3px}
+@media(max-width:1000px){.rail .discussion-home .room-work-grid{grid-template-columns:minmax(0,1fr)}.room-direction-group{gap:12px}.discussion-home .room-live-dialogue{max-height:360px}}
+@media(max-width:600px){.room-directions>header{display:block}.room-directions>header>span{display:block;margin-top:6px}.direction-group{display:block;margin-top:14px}.rail .direction-group h3{width:auto;margin:0 0 8px}.direction-group>div{gap:7px}.rail .direction-group button{font-size:12px;padding:8px 10px}.room-new-evidence>div{flex-wrap:wrap;gap:2px 10px}.room-conversation>header{flex-wrap:wrap}.rail .room-conversation>header h2{font-size:18px}.rail .company-chat-topic{font-size:17px}.room-provenance .room-memory-control summary span{display:inline-block}.room-current-divider{flex-wrap:wrap}.discussion-home .room-live-dialogue{max-height:360px}}
+.rail .generation-scope{white-space:nowrap}.rail .generation-scope select{flex:1;min-width:0}

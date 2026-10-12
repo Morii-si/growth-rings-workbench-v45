@@ -1,0 +1,50 @@
+/* One company space; rounds own their board, discussion and saved work. */
+.rail .company-breadcrumb{min-height:45px;gap:16px;background:#fffdf8}
+.rail .company-breadcrumb button{font:400 13px/1.6 var(--font-ui);padding:12px 0;border:0;color:#6b6256}
+.company-breadcrumb>span{font:400 13px/1.6 var(--font-ui);color:#6b6256}
+.company-breadcrumb>span[aria-current]{color:#342e28}
+.company-space-head{max-width:1440px;padding:0 40px;margin:auto}
+.rail .company-space-head .company-head{padding-top:24px;padding-bottom:20px;margin-bottom:20px}
+.rail .company-space-head .timeline{margin:0}
+.rail .company-space-head .time-node{padding:12px 16px}
+.rail main.room-work{padding-top:24px}
+.rail .room-work-title{border-bottom:0;margin:0 0 22px;padding:0}
+.rail .room-work-title h1{display:flex;align-items:center;flex-wrap:wrap;gap:15px}
+.company-current-status{font:400 11px/1.8 var(--font-ui);padding:3px 8px;background:#e8edf5;color:#486188}
+.rail .room-work-grid{grid-template-columns:minmax(320px,.8fr) minmax(0,1.65fr);gap:24px}
+.rail .room-conversation{position:sticky;top:16px;padding:18px 20px}
+.rail .room-conversation>header{margin-bottom:12px}
+.rail .company-chat-topic{font:500 13px/1.8 var(--font-ui);color:#463e32;margin:0 0 20px}
+.room-live-dialogue{max-height:min(420px,calc(100dvh - 440px));min-height:140px}
+.company-round-materials{min-width:0}
+.company-pane-tabs{display:flex;gap:24px;border-bottom:1px solid #d9d0c1;margin:0 0 18px;min-height:47px;align-items:stretch}
+.rail .company-pane-tabs button{font:500 13px/1.7 var(--font-ui);padding:10px 0;border:0;border-radius:0;border-bottom:2px solid transparent;background:none;color:#746955}
+.rail .company-pane-tabs button[aria-pressed=true]{border-bottom-color:#b69a46;color:#352f25}
+.company-board{min-width:0}
+.company-board .research-thread{margin-top:20px}
+.company-board .board-toolbar{margin-top:24px;gap:15px}
+.company-board .board-toolbar>div>strong{font:600 19px/1.5 var(--font-research)}
+.company-board .financial-strip strong{font-size:27px}
+.company-board .financial-strip>div{padding:13px}
+.company-board .evidence-grid{min-width:0}
+.company-board .board-module{padding:18px}
+.company-board .table-scroll{overflow:auto}
+.company-board .board-sources h2{font-size:19px}
+.company-board .board-sources ol{padding-left:0}
+.company-board .thesis-statement{font-size:16px}
+.company-board .research-thread header{flex-wrap:wrap;gap:8px}
+.rail .company-round-materials .room-saved-records{margin:0;padding:20px;background:#fffdf8;border:1px solid #d8cfc1;border-top:2px solid #c6a84f}
+.rail .company-round-materials .room-saved-records h2{font-size:19px}
+.rail .company-round-materials .room-archive-intro{display:block;padding:24px;background:#fffdf8;border:1px solid #d8cfc1;font:400 13px/1.9 var(--font-ui)}
+.company-round-materials .room-artifact{border-top:0}
+.rail .company-context-dialog{width:min(460px,94vw);max-width:94vw;max-height:88vh;height:780px;padding:0;border:1px solid #d9cfbd;background:#fffdf8}
+.company-context-dialog .assistant-shell{width:100%;height:100%;max-height:none;position:static;margin:0;box-shadow:none;display:flex;flex-direction:column}
+.company-context-dialog .context-panel{flex:1;min-height:0;overflow:auto}
+.company-context-dialog .assistant-head{flex-shrink:0}
+.company-context-dialog::backdrop{background:#322a2050}
+.rail .stage-nav>strong{font-size:19px}
+@media(max-width:1250px){.company-board .evidence-grid{grid-template-columns:1fr}.company-board .financial-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.company-board .board-toolbar{flex-wrap:wrap}.company-board .research-question-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.rail .room-work-grid{grid-template-columns:1fr}.rail .room-conversation{position:static}.room-live-dialogue{max-height:360px}.company-round-materials{width:100%}.company-pane-tabs{gap:24px}}
+@media(max-width:800px){.company-space-head{padding:0 18px}.rail .company-space-head .company-head{padding-top:20px;padding-bottom:16px}.rail .room-work-title{align-items:flex-start;flex-direction:column;gap:8px}.rail .company-breadcrumb{padding-inline:18px}.company-board .financial-strip strong{font-size:25px}.company-board .board-module{padding:16px}.company-board .board-toolbar .report-period{margin-left:0}.rail .room-work-title h1{gap:10px}}
+
+.rail .company-pane-tabs .company-annotation-entry{margin-left:auto;font-size:12px;color:#746955;text-decoration:underline;text-underline-offset:4px}

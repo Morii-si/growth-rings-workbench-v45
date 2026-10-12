@@ -1,0 +1,40 @@
+/* V40: chat produces an editable research board directly. */
+.round-summary-cloud>header{display:flex;align-items:center;justify-content:space-between}
+.rail .round-summary-cloud .board-add-category{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid #d9cba9;border-radius:9px;background:#eee5cc;color:#67522b;font:400 12px/1.6 var(--font-ui);cursor:pointer;white-space:nowrap}
+.board-add-category img{width:15px;height:15px;opacity:.65}
+.board-note-actions{display:flex;justify-content:flex-end;margin-top:14px}
+.rail .board-note-actions button{padding:6px 10px;border:1px solid #e4dccd;border-radius:8px;background:#f7f3e9;color:#796744;font:400 12px/1.6 var(--font-ui);cursor:pointer}
+.round-summary-cloud .round-message-sources{margin:12px 0 0;padding-top:12px;border-top:1px solid #e9e1d2;font:400 12px/1.8 var(--font-ui);color:#7f7158}
+.round-summary-cloud .round-message-sources ul{padding-left:18px;margin:10px 0 0;font-size:12px}
+.round-summary-cloud .round-message-sources li{padding:4px 0}
+.round-summary-cloud .round-message-sources a{font-size:12px;color:#52667e}
+.rail .round-summary-cloud .board-category-form{display:block;max-width:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;scroll-margin-block:24px 80px}
+.rail .board-category-form label{display:block;color:#77694f;font:500 12px/1.6 var(--font-ui);margin:0 0 7px}
+.rail .board-category-form input,.rail .board-category-form textarea{display:block;width:100%;min-width:0;margin:0 0 16px;padding:11px 12px;border:1px solid #ded4bf;border-radius:9px;background:#faf8f2;color:#413b31;font:400 13px/1.8 var(--font-ui);box-shadow:none}
+.rail .board-category-form textarea{min-height:145px;resize:vertical}
+.board-category-form>div{display:flex;justify-content:flex-end;gap:8px;margin-top:4px}
+.rail .board-category-form button{padding:8px 13px;border:1px solid #dbd0bc;border-radius:9px;background:#f6f1e6;color:#6e5a33;font:400 12px/1.6 var(--font-ui);cursor:pointer}
+.rail .board-category-form button.board-save-category{background:#b89a46;border-color:#a58a3e;color:#241e0e}
+.rail .board-category-form :is(input,textarea,button):focus-visible,.board-note-actions button:focus-visible,.board-add-category:focus-visible{outline:2px solid #95782c;outline-offset:3px}
+.board-new-category{max-width:680px;margin:0 0 16px;padding:22px 24px;background:#fffdf8;border:1px solid #e8dfce;border-radius:18px}
+.rail .board-new-category h3{font:500 17px/1.6 var(--font-research);margin:0 0 18px;color:#4e422b}
+.rail .company-round-heading .stage-tools .board-continue{border-radius:8px;background:#eee3c3;border-color:#d6c188;color:#665025}
+.board-legacy-summary{padding:22px;background:#fffdf9;border-radius:18px}
+.rail .board-legacy-summary p{font:400 14px/1.9 var(--font-ui);white-space:pre-wrap;margin:0}
+.round-summary-cloud .board-unassigned-conversation .round-exchange{margin-top:10px;overflow-wrap:anywhere}
+.round-summary-cloud .board-unassigned-conversation .gr-message-body{font:400 13px/1.85 var(--font-ui)}
+.rail .history-board-picker{display:inline-flex;align-items:center;gap:18px;max-width:100%;margin-top:24px;padding:9px 12px 9px 18px;background:#eee5cc;border:1px solid #cbb574;border-radius:13px;box-shadow:0 2px 5px #82662608}
+.rail .history-board-picker label{display:flex;align-items:center;gap:9px;white-space:nowrap;color:#655129;font:500 13px/1.6 var(--font-ui)}
+.rail .history-board-picker label img{opacity:.7}
+.rail .history-board-picker select{min-height:42px;max-width:100%;min-width:290px;width:auto;padding:9px 34px 9px 13px;margin:0;border:1px solid #d3bf88;border-radius:8px;background-color:#fffdf7;color:#4c3d21;font:500 14px/1.5 var(--font-ui);cursor:pointer}
+.rail .history-board-picker select:focus-visible{outline:2px solid #947628;outline-offset:3px}
+@media(max-width:700px){
+ .board-new-category{padding:18px}
+ .rail .round-summary-cloud .board-add-category{padding:7px 9px;font-size:11px}
+ .round-summary-cloud .round-summary-bubble:has(.board-category-form)>.round-bubble-content{padding-inline:17px}
+ .rail .history-board-picker{display:flex;width:100%;gap:10px;padding:9px 10px;margin-top:18px;border-radius:11px}
+ .rail .history-board-picker label{font-size:12px;gap:5px}
+ .rail .history-board-picker label img{display:none}
+ .rail .history-board-picker select{flex:1;min-width:0;width:0;min-height:40px;font-size:12px;padding-left:9px}
+ .rail .company-round-heading .stage-tools{flex-wrap:wrap}
+}

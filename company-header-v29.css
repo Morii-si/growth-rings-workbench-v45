@@ -1,0 +1,44 @@
+/* All rounds render this same header outside the changing research columns. */
+.rail .company-space-head{box-sizing:border-box;max-width:1440px;margin:0 auto;padding:0 40px}
+.rail .company-space-head .company-head{display:block;padding:24px 0 20px;margin:0;border:0;min-height:0;background:none}
+.rail .company-space-head .company-head>div{display:block}
+.rail .company-space-head .company-head h1{display:flex;align-items:baseline;gap:16px;margin:0;font:600 29px/1.25 var(--font-research);color:#620f0c}
+.rail .company-space-head .company-head h1 span{font:400 12px/1.5 var(--font-numbers);letter-spacing:.08em;color:#71685c}
+.rail .company-space-head .company-head p{margin:10px 0 0;max-width:none;font:400 15px/1.85 var(--font-research);letter-spacing:0;color:#39352c}
+.rail .company-round-nav{border:0;border-bottom:1px solid #dcd3c5;padding:0;margin:0;background:none}
+.rail .company-round-nav .timeline{display:flex;gap:28px;padding:0;margin:0;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#cabf9e transparent;scroll-padding-inline:8px}
+.rail .company-round-nav .time-node{position:relative;display:flex;flex-direction:column;flex:0 0 auto;align-items:flex-start;gap:5px;width:auto;min-width:0;max-width:none;min-height:64px;padding:10px 4px 12px;margin:0;border:0;border-bottom:2px solid transparent;border-radius:0;box-shadow:none;background:none;text-align:left;color:#60584d;white-space:nowrap;cursor:pointer}
+.rail .company-round-nav .time-node::before,.rail .company-round-nav .time-node::after{display:none}
+.rail .company-round-nav .time-node strong{font:500 13px/1.6 var(--font-ui);color:inherit}
+.rail .company-round-nav .time-node .time-date{font:400 11px/1.6 var(--font-ui);color:#7b7265;letter-spacing:0}
+.rail .company-round-nav .time-node.active{background:none;color:#405f90;border-bottom-color:#6d86b3;box-shadow:none}
+.rail .company-round-nav .time-node.active strong{font-weight:600}
+.rail .company-round-nav .time-node:hover{background:#efece3}
+.rail .company-round-nav .time-node.future{margin-left:auto;color:#796121}
+.rail .company-round-nav .time-node.future.active{border-bottom-color:#b99b3f;color:#796121;background:none}
+.rail .company-round-nav .time-node:focus-visible{outline:2px solid #b79c4b;outline-offset:-2px}
+.rail .company-round-heading.board-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0 0;margin:0 0 24px;border:0;background:none}
+.company-round-title{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rail .company-round-heading h2{font:600 27px/1.4 var(--font-research);color:#322d2b;letter-spacing:0;margin:0}
+.rail .company-round-heading p{font:400 11px/1.8 var(--font-ui);color:#776b59;margin:8px 0 0}
+.rail .company-round-heading .company-round-status{display:inline-block;font:400 11px/1.8 var(--font-ui);padding:3px 8px;background:#eee8dd;color:#716555;white-space:nowrap}
+.rail .company-round-heading .company-round-status.is-current{background:#e8edf5;color:#486188}
+.rail .company-round-heading .company-round-status.is-future{background:#f1e8c7;color:#796121}
+.rail .company-round-heading .stage-tools{display:flex;gap:10px;flex-shrink:0}
+.rail .company-round-heading .stage-tools button{display:inline-flex;align-items:center;gap:7px;font:400 12px/1.7 var(--font-ui);color:#705d2c;background:#fffdf8;border:1px solid #d9cfbc;border-radius:3px;padding:7px 10px;cursor:pointer}
+.rail .company-round-heading .stage-tools svg{width:16px;height:16px}
+.rail .company-round-heading .stage-tools button:hover{background:#efe7d3}
+.rail main.room-work{padding-top:0}
+.rail .rail-workspace.company-archive{box-sizing:border-box;max-width:1440px;padding:0 40px 40px;margin:0 auto}
+.rail .company-archive .canvas-body{padding-top:0}
+.rail .company-archive .research-snapshot{margin-top:0}
+@media(max-width:800px){
+ .rail .company-space-head,.rail .rail-workspace.company-archive{padding-inline:18px}
+ .rail .company-space-head .company-head{padding:20px 0 16px}
+ .rail .company-space-head .company-head p{font-size:15px}
+ .rail .company-round-nav .timeline{gap:20px}
+ .rail .company-round-nav .time-node{min-height:64px;padding-inline:2px}
+ .rail .company-round-heading.board-heading{align-items:flex-start;flex-direction:column;gap:12px;padding-top:20px;margin-bottom:20px}
+ .rail .company-round-heading h2{font-size:24px}
+ .rail .company-round-heading .stage-tools{min-height:36px}
+}

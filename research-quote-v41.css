@@ -1,0 +1,50 @@
+/* Referenced board content stays attached to the conversation it started. */
+.chat-user-content{display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:0;max-width:85%}
+.chat-user-content .chat-user-bubble{max-width:100%}
+.chat-active-reference,.chat-message-reference{position:relative;min-width:0;border:1px solid #dfd5c3;border-radius:12px;background:#f4eee2;color:#655842}
+.chat-active-reference{margin:0 1px 9px;padding-right:34px}
+.chat-message-reference{width:100%;background:#eee7d9b3;border-color:#e1d7c5;border-radius:14px 14px 5px 14px}
+.chat-board-reference{min-width:0}
+.chat-board-reference>summary{display:flex;align-items:center;gap:9px;padding:10px 11px;min-width:0;list-style:none;cursor:pointer;border-radius:inherit}
+.chat-board-reference>summary::-webkit-details-marker{display:none}
+.chat-reference-mark{display:grid;place-items:center;flex:0 0 22px;color:#a88b4e}
+.chat-reference-mark .chat-icon{width:17px;height:17px;opacity:.55}
+.chat-reference-copy{display:block;min-width:0;flex:1}
+.chat-reference-heading{display:flex;align-items:baseline;gap:8px;min-width:0}
+.rail .chat-reference-heading small{flex:0 0 auto;color:#8b7b60;font:400 10px/1.6 var(--font-ui);white-space:nowrap}
+.rail .chat-reference-heading strong{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#5f513a;font:500 12px/1.65 var(--font-ui)}
+.rail .chat-reference-excerpt{display:block;margin-top:2px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#897b65;font:400 11px/1.6 var(--font-ui)}
+.chat-board-reference>summary>.chat-icon{width:13px;height:13px;flex-shrink:0;opacity:.38;transform:rotate(90deg);transition:transform .16s}
+.chat-board-reference[open]>summary>.chat-icon{transform:rotate(-90deg)}
+.chat-board-reference[open] .chat-reference-excerpt{display:none}
+.rail .chat-reference-full{margin:0 12px 11px 42px;padding:0 0 0 10px;border:0;border-left:2px solid #c7b27d;max-height:118px;overflow-y:auto;white-space:pre-wrap;overflow-wrap:anywhere;color:#796b53;font:400 12px/1.7 var(--font-ui);scrollbar-width:thin;scrollbar-color:#c8b998 transparent}
+.rail .chat-reference-remove{position:absolute;top:10px;right:7px;display:grid;place-items:center;width:26px;height:26px;min-height:26px;padding:0;border:0;border-radius:7px;background:transparent;color:#8a795c;font:400 20px/1 var(--font-ui)}
+.rail .chat-reference-remove:hover{color:#564323;background:#e9ddc6}
+.chat-board-reference>summary:focus-visible,.rail .chat-reference-remove:focus-visible{outline:2px solid #a68b49;outline-offset:2px}
+.chat-board-proposal{margin-top:14px;padding-top:13px;border-top:1px solid #e7dece}
+.chat-proposal-label{display:flex;align-items:center;gap:6px;margin-bottom:8px;color:#8d713c;font:400 11px/1.5 var(--font-ui)}
+.chat-proposal-label .chat-icon{width:14px;height:14px;opacity:.55}
+.rail .chat-board-proposal>strong{display:block;color:#554a38;font:500 14px/1.6 var(--font-ui)}
+.rail .chat-board-proposal>p{margin:7px 0 0;color:var(--chat-ink);font:400 14px/1.8 var(--font-ui);white-space:pre-wrap;overflow-wrap:anywhere}
+.rail .chat-board-proposal>small{display:block;margin-top:10px;color:#8e806b;font:400 11px/1.6 var(--font-ui)}
+.has-board-reference .chat-suggestions{padding-bottom:0}
+@media(max-width:600px){
+ .chat-user-content{max-width:94%}
+ .chat-active-reference{margin-bottom:8px;padding-right:30px}
+ .chat-board-reference>summary{padding:9px;gap:7px}
+ .chat-reference-mark{flex-basis:18px}
+ .chat-reference-heading{gap:6px}
+ .rail .chat-reference-heading strong{font-size:11px}
+ .rail .chat-reference-heading small{font-size:9px}
+ .rail .chat-reference-excerpt{font-size:10px}
+ .rail .chat-reference-full{margin-left:34px;font-size:11px;max-height:102px}
+ .rail .chat-reference-remove{right:5px;top:9px}
+ .rail .chat-board-proposal>strong,.rail .chat-board-proposal>p{font-size:13px}
+ .has-board-reference .chat-suggestion-bar{padding-inline:1px}
+}
+@media(max-height:680px){
+ .chat-active-reference{margin-bottom:7px}
+ .chat-active-reference .chat-board-reference>summary{padding-block:7px}
+ .rail .chat-active-reference .chat-reference-full{max-height:72px}
+}
+@media(prefers-reduced-motion:reduce){.chat-board-reference>summary>.chat-icon{transition:none}}

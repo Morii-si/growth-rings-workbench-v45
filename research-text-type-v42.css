@@ -1,0 +1,35 @@
+/* React Bits Text Type: single sentence with a 0.5s alternating cursor fade.
+   Source and MIT + Commons Clause notice: research-text-type.js. */
+.rail .chat-welcome h1.chat-welcome-title {
+  display:inline-grid;
+  grid-template-columns:minmax(0,1fr);
+  max-width:100%;
+  margin:0 0 10px;
+  color:#413b32;
+  font:700 clamp(22px,2vw,28px)/1.5 var(--font-ui);
+  letter-spacing:.01em;
+  text-align:left;
+  white-space:pre-wrap;
+}
+.chat-welcome-title .text-type__reserve,
+.chat-welcome-title .text-type__visual {
+  grid-area:1/1;
+}
+.chat-welcome-title .text-type__reserve { visibility:hidden; }
+.chat-welcome-title .text-type__cursor,
+.chat-welcome-title .text-type__cursor-space {
+  display:inline-block;
+  margin-left:.25rem;
+  font-weight:400;
+}
+.chat-welcome-title .text-type__cursor {
+  opacity:1;
+  color:#a58136;
+  animation:research-text-type-cursor .5s cubic-bezier(.65,0,.35,1) infinite alternate;
+}
+.chat-welcome-title[data-typing-state="disposed"] .text-type__cursor { animation:none; }
+.research-chat-page .chat-file-icon.chat-report-book { font:400 27px/1 "Apple Color Emoji","Segoe UI Emoji",sans-serif; }
+@keyframes research-text-type-cursor { from { opacity:1; } to { opacity:0; } }
+@media(prefers-reduced-motion:reduce) {
+  .chat-welcome-title .text-type__cursor { animation:none; visibility:hidden; }
+}

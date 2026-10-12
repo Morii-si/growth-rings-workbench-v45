@@ -1,0 +1,102 @@
+/* Generated V3 transcripts are direct panel children, unlike the V1/V2
+   .discussion-log structure. Give this archive-only surface its own scroll
+   region and shared reading inset without changing the full-page chat. */
+.rail:has(.company-archive) .assistant-shell:has(#panel-content > .discussion-transcript) {
+  --archive-reading-inset:20px;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  overflow:hidden;
+}
+.rail:has(.company-archive) .assistant-shell:has(#panel-content > .discussion-transcript) > :is(.assistant-head,.discussion-mode) {
+  flex-shrink:0;
+  padding-inline:var(--archive-reading-inset);
+}
+.rail:has(.company-archive) .assistant-shell:has(#panel-content > .discussion-transcript) :is(.context-panel,#panel-content) {
+  display:flex;
+  flex:1 1 0%;
+  flex-direction:column;
+  min-width:0;
+  min-height:0;
+  width:100%;
+  max-height:none;
+  overflow:hidden;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content:has(> .discussion-transcript) > .discussion-heading {
+  flex-shrink:0;
+  padding:20px var(--archive-reading-inset) 16px;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content:has(> .discussion-transcript) > .discussion-heading h2 {
+  margin:0;
+  color:#51483a;
+  font:500 14px/1.6 var(--font-ui);
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript {
+  flex:1 1 0%;
+  min-height:0;
+  min-width:0;
+  padding:4px var(--archive-reading-inset) 24px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#c8bca7 transparent;
+  scroll-padding-block:16px;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-exchange {
+  min-width:0;
+  padding:0 0 28px;
+  overflow-wrap:anywhere;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-exchange:last-child { padding-bottom:0; }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-message { margin:0 0 16px; }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-user {
+  margin-left:28px;
+  align-items:flex-end;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-user .gr-message-body {
+  max-width:100%;
+  padding:10px 13px;
+  font:400 13px/1.85 var(--font-ui);
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-speaker { margin-bottom:8px; }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-avatar { width:25px;height:25px; }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-ai .gr-message-body {
+  padding:0;
+  color:#343434;
+  font:400 13px/1.95 var(--font-ui);
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-message-sources {
+  margin:-4px 0 0;
+  font:400 12px/1.8 var(--font-ui);
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-message-sources ul {
+  margin:9px 0 0;
+  padding-left:18px;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-message-sources li + li { margin-top:7px; }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-message-sources :is(a,button) {
+  font:inherit;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-board-reference {
+  margin:0 0 18px;
+  padding:11px 13px;
+  border:0;
+  border-left:2px solid #c6a84f;
+  background:#f4efd9;
+  color:#655842;
+  font:400 12px/1.8 var(--font-ui);
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-board-reference strong { font:500 13px/1.7 var(--font-ui); }
+.rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .round-board-reference p { margin:7px 0 0;font:inherit;color:inherit; }
+@media(max-width:600px) {
+  .rail:has(.company-archive) .assistant-shell:has(#panel-content > .discussion-transcript) { --archive-reading-inset:18px; }
+  .rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+  .rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-user { margin-left:24px; }
+  .rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-ai .gr-message-body,
+  .rail:has(.company-archive) .assistant-shell #panel-content > .discussion-transcript .gr-user .gr-message-body { font-size:14px; }
+}

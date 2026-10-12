@@ -1,0 +1,120 @@
+/* === Original type system: verified against 0c0f095 atelier.css / brand-v12.css ===
+   Paper & Ink principles from frontend-slides, adapted to a responsive application.
+   Preserve the original local fonts; no remote fonts or fixed slide canvas. */
+body.rail{
+ --font-ui:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+ --font-research:"Songti SC","STSong",serif;
+ --font-numbers:Georgia,"Times New Roman",serif;
+ font-family:var(--font-ui);
+}
+.rail :is(.room-home,.room-work,.room-saved-records,.room-archive-intro){font-family:var(--font-ui)}
+.rail :is(.room-home,.room-work,.room-saved-records) :is(h1,h2,h3),
+.rail .stage-nav>strong,.rail .assistant-head strong,.rail .research-returns h2,
+.rail .board-heading h2,.rail .dialogue-heading h2,.rail #room-save-form h3{
+ font-family:var(--font-research);font-weight:600;letter-spacing:0;
+}
+.rail .assistant-shell :is(p,button,textarea,summary),
+.rail .rw-panel :is(p,button,textarea,summary),
+.rail #rw-editor :is(p,button,textarea,label,summary),.rail #rw-back,.rail #rw-saved{
+ font-family:var(--font-ui);
+}
+.rail .assistant-shell :is(h2,h3){font-family:var(--font-research)}
+.rail .discussion-takeaway p{font-family:var(--font-ui)}
+.rail .company-head h1,.rail .company-head p{font-family:var(--font-research)}
+.rail .stage-nav>strong{font-size:24px;font-weight:600}
+.rail .assistant-head strong{font-size:18px}
+.rail .board-heading h2{font-size:27px;line-height:1.4}
+.rail .board-heading.is-future h2{font-family:var(--font-research)}
+.rail .financial-strip strong,.rail .company-head h1 span,.rail .time-date{font-family:var(--font-numbers)}
+
+/* === Shared navigation: publication-style section tabs === */
+.rail .room-nav{background:var(--paper);gap:32px;min-height:52px}
+.rail .room-nav button{font:400 17px/1.5 var(--font-research);padding:15px 0;color:#62584e}
+.rail .room-nav button[aria-current]{color:#322d2b;font-weight:600;border-bottom-color:#a68a35}
+.rail .room-nav button:focus-visible{outline-color:#a68a35}
+.rail :is(.room-home,.room-work) .room-primary{border-radius:3px;font-family:var(--font-ui);font-weight:500;background:#c6a84f;color:#342b13;border-color:#b59843}
+.rail :is(.room-home,.room-work) .room-primary:hover{background:#d5bb70}
+.rail :is(.room-home,.room-work) .room-link{font-size:13px;color:#765d22}
+
+/* === Research index: flat paper, serif hierarchy, restrained evidence colours === */
+.rail main.room-home{max-width:1240px;padding-top:30px}
+.rail .room-welcome{margin-bottom:22px;gap:24px}
+.rail .room-welcome h1{font:600 30px/1.4 var(--font-research);color:#322d2b}
+.room-welcome>p{font-family:var(--font-ui);color:#756b63;font-size:13px}
+.rail .room-resume{border-radius:0;border:1px solid #d8cfc1;border-top:2px solid #966353;background:#fffdf8}
+.room-company-heading{padding:26px 30px 0}
+.rail .room-company-heading h2{font:600 36px/1.25 var(--font-research);color:#620f0c}
+.room-available{border-radius:2px;font-weight:400;color:#425b84;background:#e7ecf4}
+.room-resume-main{padding:16px 30px 24px}
+.rail .room-resume-main h3{font:500 25px/1.6 var(--font-research);color:#322d2b;margin-bottom:20px}
+.room-home-context{gap:32px;padding:20px 0;border-color:#ded5c8}
+.room-home-context>div+div{border-color:#ded5c8;padding-left:32px}
+.room-home-context dt{font:500 12px/1.6 var(--font-ui)}
+.room-home-context dd{font:400 17px/1.9 var(--font-research);color:#39332e}
+.room-home-context small{font:400 12px/1.7 var(--font-ui);color:#766b5c}
+.room-home-next>p{font:400 14px/1.85 var(--font-ui);color:#62594e}
+.rail .room-home-next>.room-primary{font:500 14px/1.6 var(--font-ui);min-height:46px}
+.room-shelf{background:#f3efe6;border-color:#ded5c8}
+.room-shelf>summary{padding:15px 30px;font-weight:500}
+.room-shelf>summary>span:first-child{font:600 17px/1.7 var(--font-research)}
+.room-shelf>summary small{font:400 12px/1.7 var(--font-ui)}
+.room-shelf>div{padding-inline:30px}
+.rail .room-other-research h2{font:600 22px/1.5 var(--font-research)}
+.room-other-research>header p{color:#766f64}
+.room-showcase{background:#efede6;border-color:#dcd6cb;padding:19px 24px;grid-template-columns:130px minmax(0,1fr) 136px 130px}
+.rail .room-showcase h3{font:500 24px/1.5 var(--font-research);color:#51483e}
+.room-showcase>p{font:400 15px/1.8 var(--font-ui);color:#655e53}
+.room-showcase-status{font-family:var(--font-ui);color:#756b5d}
+.rail .room-showcase button:disabled{background:#e7e3d9;border-color:#d1c9ba;color:#81786b;border-radius:3px}
+
+/* === Working research: conversation margin beside the retained research sheet === */
+.rail main.room-work{max-width:1440px;padding-top:30px;padding-bottom:40px}
+.rail.room-screen-work .demo-bar{position:static;width:auto;background:transparent;box-shadow:none}
+.room-work-title{padding-bottom:22px;border-bottom:1px solid #b6937e;margin-top:0;margin-bottom:28px}
+.rail .room-work-title h1{font:600 30px/1.5 var(--font-research);color:#322d2b;letter-spacing:0}
+.room-work-title p{font:400 12px/1.8 var(--font-ui);margin-top:8px}
+.room-work-grid{gap:36px;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.room-conversation{padding:18px 24px 24px;background:#f4f0e5;border-top:2px solid #c6a84f}
+.room-conversation>header{margin-bottom:20px}
+.room-conversation>header>strong,.room-ai-answer>strong{font-family:var(--font-numbers);font-size:17px;font-weight:600;color:#41392c}
+.room-memory-control{border-color:#d9cfb8}
+.room-memory-control blockquote{background:#eee5c7;font:400 16px/1.9 var(--font-research);padding:12px 15px}
+.room-user-message{background:#e9dfc4;border-radius:3px;font:400 14px/1.9 var(--font-ui);padding:12px 15px}
+.room-ai-answer,.room-ai-answer p{font:400 15px/1.9 var(--font-ui);color:#3b352d}
+.rail .room-composer{border-radius:3px;background:#fffdf8;padding:16px;border-color:#c8b994}
+.rail .room-composer textarea{font-family:var(--font-ui)}
+.rail .room-composer button{border-radius:3px;font-weight:500}
+.room-artifact{border:1px solid #d8cfc1;border-top:2px solid #6d86b3;padding:22px 28px;background:#fffdf8}
+.rail .room-artifact h2{font:600 28px/1.5 var(--font-research);color:#322d2b}
+.room-artifact>header{padding-bottom:17px}
+.room-task-title input{margin:0}
+.rail .room-task h3{font:600 19px/1.7 var(--font-research)}
+.room-task>p,.room-task details p{font:400 14px/1.9 var(--font-ui);color:#63594b}
+.room-task-origin,.room-task details>summary,.room-references>summary{font-size:12px;line-height:1.8}
+.room-task-origin.from-memory{background:#f1e7bf;color:#715a1c}
+.room-evidence p{font:400 18px/1.8 var(--font-research)}
+.room-artifact-actions{padding-top:4px}
+.room-artifact-actions p,.room-case-boundary{font-size:12px;line-height:1.8}
+.rail .room-saved-records h2{font:600 23px/1.6 var(--font-research)}
+.room-saved-records{border-radius:0;border-top:2px solid #b59a4f}
+.rail #room-save-form h3{font:600 20px/1.6 var(--font-research)}
+.rail #room-save-form textarea,.rail #room-scope{border-radius:3px;font-family:var(--font-ui)}
+
+/* === Narrow screens: retain readable type and ordinary page scrolling === */
+@media(max-width:800px){
+ .rail .room-nav{gap:26px}.rail .room-nav button{font-size:16px;padding:14px 0}
+ .rail main.room-home{padding:24px 18px 30px}.rail .room-welcome h1{font-size:27px}
+ .room-company-heading{padding:22px 20px 0}.rail .room-company-heading h2{font-size:32px}
+ .room-resume-main{padding:16px 20px 22px}.rail .room-resume-main h3{font-size:23px}
+ .room-home-context{gap:20px}.room-home-context>div+div{padding-left:0}.room-home-context dd{font-size:16px}
+ .room-shelf>summary{padding:15px 20px}.room-shelf>div{padding-inline:20px}
+ .room-showcase{grid-template-columns:1fr auto;padding:18px}.rail .room-showcase h3{font-size:23px}
+ .rail main.room-work{padding:24px 18px 40px}.rail .room-work-title h1{font-size:26px}
+ .room-work-grid{grid-template-columns:1fr;gap:24px}.room-work-title{padding-bottom:18px;margin-bottom:22px}
+ .room-conversation{padding:18px}.room-artifact{padding:20px 18px}
+ .rail .room-artifact h2{font-size:25px}.rail .stage-nav>strong{font-size:22px}
+ .rail .board-heading h2{font-size:24px}.rail .room-composer textarea,.rail #room-save-form textarea{font-size:16px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .rail .room-nav button,.rail .room-primary,.room-shelf>summary{transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out}
+}

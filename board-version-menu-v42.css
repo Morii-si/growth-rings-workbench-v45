@@ -1,0 +1,25 @@
+/* A paper-toned version menu shares the typography and rhythm of the board tabs. */
+.company-board-menu:focus-within{outline:none;border-radius:0}
+.rail .company-main-tabs .history-board-trigger{gap:9px;min-height:55px;padding:14px 0;border:0;border-radius:0;background:transparent;color:inherit;font:500 14px/1.8 var(--font-ui)}
+.rail .company-main-tabs .history-board-trigger:hover{color:#403624;background:transparent}
+.rail .company-main-tabs .history-board-trigger:focus-visible{outline:2px solid #a68c47;outline-offset:5px;border-radius:3px}
+.rail .company-main-tabs .history-board-trigger>.board-menu-version{padding:1px 6px;border-radius:4px;background:#ece5d4;color:#7b6538;font:500 11px/1.5 var(--font-ui)}
+.history-board-trigger .board-version-chevron{width:14px;height:14px;margin-left:1px;transition:transform .16s ease}
+.history-board-trigger[aria-expanded=true] .board-version-chevron{transform:rotate(180deg)}
+.board-version-popover{position:fixed;z-index:150;box-sizing:border-box;width:328px;max-width:calc(100vw - 24px);padding:7px;border:1px solid #ded3bd;border-radius:15px;background:#fffdf8;box-shadow:0 12px 36px #5b452319,0 2px 6px #5b45230a;overflow:auto;overscroll-behavior:contain;scrollbar-color:#d8cdb8 transparent;scrollbar-width:thin}
+.board-version-popover[hidden]{display:none}
+.rail .company-main-tabs .board-version-option{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;min-height:67px;padding:11px 12px;border:1px solid transparent;border-radius:10px;text-align:left;background:transparent;color:#40392f;font:400 13px/1.5 var(--font-ui)}
+.rail .company-main-tabs .board-version-option+.board-version-option{margin-top:3px}
+.rail .company-main-tabs .board-version-option:hover{background:#f5f0e5}
+.rail .company-main-tabs .board-version-option[aria-checked=true]{background:#efe5c9;border-color:#e5d6ae;color:#584621}
+.rail .company-main-tabs .board-version-option:focus-visible{outline:1.5px solid #b79b51;outline-offset:-2px;background:#f5efdf}
+.rail .company-main-tabs .board-version-option[aria-checked=true]:focus-visible{background:#efe5c9}
+.rail .company-main-tabs .board-version-option>.board-version-badge{display:flex;align-items:center;justify-content:center;flex:0 0 32px;width:32px;height:32px;margin:0;padding:0;border:1px solid #e1d7c4;border-radius:8px;background:#f8f4ea;color:#8a7958;font:500 12px/1 var(--font-ui)}
+.rail .company-main-tabs .board-version-option[aria-checked=true]>.board-version-badge{background:#fff9e9;border-color:#d9c795;color:#7b5e28}
+.rail .company-main-tabs .board-version-option>.board-version-copy{display:block;flex:1;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:inherit;font:inherit}
+.board-version-copy strong{display:block;color:inherit;font:500 13px/1.6 var(--font-ui)}
+.board-version-copy small{display:block;margin-top:3px;color:#95856a;font:400 11px/1.4 var(--font-ui)}
+.board-version-option .board-version-check{flex:0 0 16px;width:16px;height:16px;color:#8c6d2f;opacity:0}
+.board-version-option[aria-checked=true] .board-version-check{opacity:1}
+@media(max-width:600px){.rail .company-main-tabs .history-board-trigger{font-size:13px;gap:7px}.rail .company-main-tabs .history-board-trigger>.board-menu-version{font-size:10px}.board-version-popover{border-radius:13px}.rail .company-main-tabs .board-version-option{min-height:64px;padding:10px}}
+@media(prefers-reduced-motion:reduce){.history-board-trigger .board-version-chevron{transition:none}}

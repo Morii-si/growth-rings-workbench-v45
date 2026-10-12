@@ -1,0 +1,50 @@
+/* One conversation grammar for live turns, history, saved transcripts and cases. */
+.rail .gr-message{display:flex;flex-direction:column;min-width:0;margin:0 0 24px;padding:0;border:0;background:transparent;border-radius:0;opacity:1}
+.rail .gr-speaker{display:flex;align-items:center;gap:9px;margin:0 0 10px;color:#554c3f;font:600 13px/1.6 var(--font-ui)}
+.rail .gr-speaker>span{font-family:Georgia,"Times New Roman",serif;font-size:15px}
+.rail .gr-speaker>small{font:400 11px/1.5 var(--font-ui);color:#756d61;margin-left:auto}
+.rail .gr-speaker .gr-avatar{width:29px;height:29px;object-fit:contain;flex-shrink:0}
+.rail .gr-ai .gr-message-body{padding:0 0 0 38px;color:#37332d;font:400 14px/1.95 var(--font-ui);white-space:pre-wrap;overflow-wrap:anywhere;background:transparent}
+.rail .gr-message-body p{font:inherit;color:inherit;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 14px}
+.rail .gr-message-body p:last-child{margin-bottom:0}
+.rail .gr-user{align-items:flex-end;margin-left:38px}
+.rail .gr-user .gr-speaker{font:400 12px/1.6 var(--font-ui);color:#766d60;margin-bottom:6px}
+.rail .gr-user .gr-message-body{background:#eee4c8;border:1px solid #e4d8b8;border-radius:12px 12px 3px 12px;padding:12px 16px;max-width:100%;color:#39352b;font:400 14px/1.9 var(--font-ui);white-space:pre-wrap;overflow-wrap:anywhere}
+.rail .room-conversation{background:#fffdf8;border:1px solid #ddd3c2;border-top:2px solid #c6a84f;padding:22px 24px}
+.rail .room-conversation>header{border-bottom:1px solid #e2dbce;padding-bottom:15px;margin-bottom:24px}
+.rail .room-conversation>header h2{font:600 23px/1.5 var(--font-research);color:#39332b;margin:0}
+.rail .room-conversation>header>span{font:400 12px/1.5 var(--font-ui);color:#746c5e}
+.rail .room-conversation .gr-ai .gr-message-body{font-size:15px;line-height:1.95}
+.rail .room-ai-answer .room-change{color:#37332d}
+.rail .gr-citations{margin-top:18px;white-space:normal}
+.rail .gr-citations .room-memory-control{padding:0;margin:0 0 12px;border:1px solid #dfd5b8;background:#f7f2e3;border-radius:4px}
+.rail .room-memory-control>summary{font:500 12px/1.8 var(--font-ui);color:#6b5627;cursor:pointer;padding:10px 12px}
+.rail .room-memory-control>summary>span{font-weight:400;margin-left:10px;color:#77633a}
+.rail .room-memory-control .gr-quoted-discussion{padding:0 12px 12px}
+.rail .gr-quoted-discussion>p{font:500 13px/1.8 var(--font-ui);color:#52482f;margin:8px 0}
+.rail .gr-quoted-discussion blockquote{font:400 15px/1.85 var(--font-research);color:#5b5038;background:transparent;padding:0;margin:10px 0;border:0}
+.rail .room-memory-control>label{display:flex;gap:8px;align-items:center;padding:12px;margin:0;border-top:1px solid #e2d8bc;font:400 12px/1.7 var(--font-ui)}
+.rail .room-memory-control>label input{margin:0}
+.rail .gr-source-link{font:400 12px/1.7 var(--font-ui);color:#49658c;text-decoration:underline;text-underline-offset:4px}
+.rail .gr-event,.rail .gr-pending{font:400 12px/1.8 var(--font-ui);color:#716858;margin:16px 0;padding:10px 0;border-block:1px solid #e3dccf}
+.rail .gr-event{text-align:center}
+.rail .room-earlier{margin-bottom:22px;border-bottom:1px solid #e3dccf;padding-bottom:14px}
+.rail .room-earlier>summary{font:400 12px/1.8 var(--font-ui);color:#76674d;cursor:pointer;margin-bottom:14px}
+.rail .room-case-help{margin-top:12px;color:#796f5d;font:400 12px/1.8 var(--font-ui)}
+.rail .room-case-help>summary{cursor:pointer}
+.rail .room-case-help p{font:inherit;margin:9px 0 0}
+.rail .room-composer>div>span{font-size:11px}
+.rail .discussion-entry[open] .conversation-open-label:before{content:'历史 · ';color:#776e61}
+.rail .room-record-body>.gr-message{margin-top:20px}
+.rail .discussion-transcript .gr-ai .gr-message-body{padding-left:0;font-size:13px}
+.rail .discussion-transcript .gr-user{margin-left:24px}
+.rail .discussion-transcript .gr-user .gr-message-body{font-size:13px}
+.rail .dialogue-opening.gr-ai,.rail .dialogue-answer.gr-ai{background:transparent;padding:0}
+.rail .dialogue-answer.gr-ai h3{font:600 19px/1.7 var(--font-research);margin:0 0 12px}
+@media(max-width:800px){
+ .rail .room-conversation{padding:18px}
+ .rail .gr-ai .gr-message-body{padding-left:0}
+ .rail .gr-user{margin-left:22px}
+ .rail .room-conversation .gr-ai .gr-message-body{font-size:15px}
+ .rail .room-conversation>header h2{font-size:22px}
+}

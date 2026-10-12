@@ -1,0 +1,25 @@
+/* Keep the draft action beside the message composer in every chat state. */
+.rail .research-chat-page a.chat-nav-button{text-decoration:none}
+.rail .research-chat-page form.chat-composer{display:flex;flex-direction:column;align-items:stretch;gap:9px}
+.rail .research-chat-page .chat-composer textarea{flex:none;height:42px;min-height:42px}
+.chat-composer-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%}
+.rail .chat-draft-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:33px;padding:7px 11px;border:1px solid #d4bf8d80;border-radius:8px;background:#eee4cb;color:#6b552b;font:400 12px/1.5 var(--font-ui);box-shadow:0 1px 2px #674c1708}
+.chat-draft-button .chat-icon{width:15px;height:15px;opacity:.55}
+.rail .chat-draft-button:hover:not(:disabled){background:#e7d6ae;border-color:#c1a66b}
+.rail .chat-draft-button:disabled{opacity:1;color:#887659;background:#f6f1e7;border-color:#e7dfd0;cursor:default;box-shadow:none}
+.rail .research-chat-page.is-opening .chat-composer textarea{height:24px;min-height:24px}
+@media(max-width:600px){
+ .rail .chat-topbar{gap:10px;padding-inline:14px}
+ .chat-topbar nav{gap:0}.rail .chat-nav-button{font-size:10px;padding:7px 6px}
+ .rail .chat-draft-button{font-size:11px;padding:7px 9px}
+ .chat-draft-button .chat-icon{width:14px;height:14px}
+ .rail .research-chat-page .chat-composer textarea{height:38px;min-height:38px}
+}
+@media(max-height:680px){
+ .rail .is-opening main.chat-stage{gap:17px;padding-top:8px;padding-bottom:12px}
+ .chat-welcome-identity .chat-avatar{width:42px;height:42px;flex-basis:42px}
+ .chat-welcome-identity .chat-icon{width:26px;height:26px}
+ .rail .research-chat-page form.chat-composer{gap:6px}
+ .rail .research-chat-page .chat-composer textarea{height:32px;min-height:32px}
+ .rail .research-chat-page.is-opening .chat-composer textarea{height:24px;min-height:24px}
+}

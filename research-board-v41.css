@@ -1,0 +1,14 @@
+/* Version choice belongs to the board navigation; research edits begin in chat. */
+.company-board-menu{position:relative;display:flex;align-items:center;border-bottom:2px solid transparent;color:#746955}
+.company-board-menu>span{display:flex;align-items:center;gap:8px;padding:14px 0;font:500 14px/1.8 var(--font-ui);white-space:nowrap}
+.company-board-menu[data-current]{color:#342e28;border-bottom-color:#b69a46}
+.company-board-menu .board-menu-version{padding:1px 6px;border-radius:4px;background:#ece5d4;color:#7b6538;font:500 11px/1.5 var(--font-ui)}
+.rail .company-board-menu select{position:absolute;inset:0;width:100%;height:100%;min-width:0;margin:0;padding:0;border:0;opacity:0;cursor:pointer;font:400 14px/1.8 var(--font-ui)}
+.company-board-menu:focus-within{outline:2px solid #967a35;outline-offset:4px;border-radius:3px}
+.rail .research-snapshot>summary,.rail .research-snapshot>summary>span:first-child,.rail .round-summary-cloud>header h2{font:500 16px/1.6 var(--font-research);color:#393225;letter-spacing:0}
+.rail .board-note-actions button{display:inline-flex;align-items:center;gap:8px;border-radius:9px;padding:8px 12px;background:#eee5cc;border-color:#d9cba9;color:#67522b}
+.board-note-actions button svg{width:16px;height:16px}
+.round-board-reference{margin:0 0 14px;padding:11px 14px;border-left:2px solid #b49a57;background:#f2eddf;border-radius:0 8px 8px 0;color:#76694f}
+.round-board-reference strong{display:block;font:500 12px/1.7 var(--font-ui)}
+.round-board-reference p{margin:4px 0 0;font:400 12px/1.8 var(--font-ui);white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:600px){.company-board-menu>span{font-size:13px}.company-main-tabs{gap:24px}.company-board-menu .board-menu-version{font-size:10px}}

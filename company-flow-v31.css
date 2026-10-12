@@ -1,0 +1,29 @@
+/* The round is the only navigation level. Checks live beside evidence;
+   saved summaries belong to the conversation that produced them. */
+.room-current-checks{margin:0 0 24px;background:#f6f0dc;border-block:1px solid #d7c68e;scroll-margin-top:24px}
+.room-current-checks>summary{display:flex;align-items:center;gap:12px;padding:16px;cursor:pointer;list-style:none}
+.room-current-checks>summary::-webkit-details-marker,.room-saved-history>summary::-webkit-details-marker{display:none}
+.room-current-checks>summary:after,.room-saved-history>summary:after{content:'';width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);flex-shrink:0;margin-left:4px;align-self:center}
+.room-current-checks[open]>summary:after,.room-saved-history[open]>summary:after{transform:rotate(225deg)}
+.room-checks-title{font:500 13px/1.8 var(--font-ui);color:#594d32;white-space:nowrap}
+.room-checks-preview{font:400 12px/1.8 var(--font-ui);color:#6a5c3f;flex:1}
+.room-checks-count{font:400 11px/1.8 var(--font-ui);color:#6a5c3f;white-space:nowrap}
+.rail .room-current-checks .room-artifact{padding:20px;background:#fffdf8;border:0;border-top:1px solid #dfd3b3}
+.rail .room-current-checks .room-artifact>header h2{font-size:19px}
+.rail .room-current-checks .room-artifact>header span{font:400 12px/1.8 var(--font-ui)}
+.rail .room-current-checks .room-artifact-actions p{max-width:36em}
+.room-saved-history{border-top:1px solid #ddd4c4;margin-top:16px;padding-top:4px;scroll-margin-top:24px}
+.room-saved-history>summary{display:flex;align-items:center;gap:10px;list-style:none;cursor:pointer;padding:12px 0;font:500 12px/1.8 var(--font-ui);color:#554c3f}
+.room-saved-history>summary>span{font:400 11px/1.8 var(--font-ui);color:#756d61;margin-left:auto}
+.rail .room-conversation:has(.room-saved-history[open]){position:static}
+.rail .room-saved-history .room-saved-records{padding:0;margin:0;border:0;background:transparent}
+.rail .room-saved-history .room-saved-records>details{border:0;border-top:1px solid #e4dccd;margin:0;padding:0;background:transparent}
+.rail .room-saved-history .room-saved-records>details>summary{padding:12px 0;display:flex;flex-wrap:wrap;gap:6px;font:400 11px/1.8 var(--font-ui)}
+.rail .room-saved-history .room-record-body{padding:0 0 16px}
+.rail .room-saved-history .room-record-body h3{font:500 14px/1.8 var(--font-ui)}
+.rail .room-saved-history .room-record-body p{font:400 13px/1.9 var(--font-ui)}
+.rail .room-saved-history .room-record-body .room-task{padding:12px 0}
+.room-saved-history .room-record-body>details{font:400 12px/1.8 var(--font-ui);margin-top:16px}
+.room-current-checks>summary:focus-visible,.room-saved-history summary:focus-visible{outline:2px solid #947a30;outline-offset:3px}
+@media(max-width:1100px){.room-current-checks>summary{flex-wrap:wrap;gap:6px 12px}.room-checks-preview{order:3;flex-basis:100%}.room-checks-count{margin-left:auto}}
+@media(max-width:600px){.rail .room-current-checks .room-artifact{padding:16px}.room-current-checks>summary{padding:14px}.rail .room-current-checks .room-artifact>header{flex-wrap:wrap;gap:16px}}
