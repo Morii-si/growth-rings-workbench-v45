@@ -1,11 +1,14 @@
 # Verification map
 
-`npm test` 执行仓库根目录的 `*.test.js`（Node 内置 test runner），`npm run build` 执行 Vite 构建和 assets 复制。本次交接的 clean install、124/124 项单元测试及构建已通过；这些命令可在 clone 后重跑。仓库当前没有 `.github/workflows`，没有代码内声明的 CI 必须通过项；托管平台的分支保护配置未由本文件核验。
+`npm test` 执行仓库根目录的 `*.test.js`（Node 内置 test runner），`npm run build` 执行 Vite 构建和 assets 复制。v45.1 已通过 138/138 项单元测试（含 14 项内置作品与存储保护测试）、生产构建及 7 项浏览器验收，页面错误和网络请求错误均为 0。详情见 [Release validation](release-validation.md) 与 [内置作品浏览器验证](bundled-data-validation.md)；公开发布后的匿名 clone 尚待核对，这些命令可在 clone 后重跑。旧标签 `ui-v45` 的 124 项单测记录单独保留为历史证据。仓库当前没有 `.github/workflows`，没有代码内声明的 CI 必须通过项；托管平台的分支保护配置未由本文件核验。
 
 ## Existing coverage
 
 | Use case → rule | Expected behavior / negative case | Evidence | Status |
 | --- | --- | --- | --- |
+| 完整作品初始化 | 无本机存档的普通访问直接载入 12 条对话 / 11 条用户发言 / 4 条小结；不重复追加 | `bundled-research-demo.test.js`；[浏览器验证](bundled-data-validation.md) | Passed：unit + desktop/mobile browser |
+| 既有本机记录保留 | 已有用户新增文字/快照保持；少消息或单类目不触发覆盖 | `bundled-research-demo.test.js`；[浏览器验证](bundled-data-validation.md) | Passed：unit + browser |
+| 精确旧记录迁移与失败 | 仅完整状态指纹匹配才迁移；先写 raw 备份并读回；冲突/失败/损坏阻止覆盖 | `bundled-research-demo.test.js`；[浏览器验证](bundled-data-validation.md) | Passed：unit；browser 验证精确恢复与相似存档保护 |
 | 开场存档隔离 | 新开场不覆盖普通 key；刷新恢复相同 key；非法 session id 不能逃逸命名空间 | [Flows](flows.md)；`research-session.js` / `research-session.test.js` | Existing unit |
 | 真实用户讨论后生成 | 仅开场或未发送输入不能生成；生成不要求待查任务；旧任务字段不影响新产物 | [Flows](flows.md)；`generateConversationBoard()` / `research-board-direct.test.js` | Existing unit |
 | 显式更新与冻结快照 | 新讨论不静默纳入；旧类目、原文、引用、人工编辑及已有快照保留 | [Architecture](architecture.md)；`research-draft-model.js` / `research-board-direct.test.js`、`research-board-quote.test.js` | Existing unit |
@@ -17,7 +20,7 @@
 
 部分旧测试仍覆盖草稿编辑、任务、跟进规则和直接编辑 model API（例如 `continuity.test.js`、`research-return.test.js`）。这些是兼容性覆盖，不能据此判断当前 UI 提供相应功能。现有计算测试验证固定数据内部一致性，不验证外部公告的真实性或可用性。
 
-一次性浏览器验证记录在 [Release validation](release-validation.md)：覆盖桌面/手机开场、生成看板、引用后显式更新、历史切换、导出及刷新恢复。该记录说明本次实际检查结果；浏览器脚本和样本未纳入仓库，不属于 `npm test` 的自动覆盖。
+分版本浏览器验证记录在 [Release validation](release-validation.md)。旧 ui-v45 覆盖桌面/手机开场、生成看板、引用后显式更新、历史切换、导出及刷新恢复；v45.1 已在独立 Chrome 的 1470 × 760 和 390 × 844 视口覆盖完整作品初访、导出与刷新保留、独立开场返回、精确旧存档原样备份、相似存档保护及纯静态请求边界，共 7 项通过。备份写入/读回失败、冲突及损坏状态由单元测试覆盖。该记录按版本说明实际检查结果；浏览器脚本和样本未纳入仓库，不属于 `npm test` 的自动覆盖。
 
 ## Proposed tests
 

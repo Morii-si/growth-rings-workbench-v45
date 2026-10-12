@@ -1,8 +1,10 @@
-# Growth Rings v45 handoff
+# Growth Rings v45.1 handoff
 
-- This is the approved v45 application in the independent `Morii-si/growth-rings-workbench-v45` repository. The legacy `Morii-si/growth-rings-workbench` repository is a different publication. Do not substitute its source or pull its branch into this project.
-- Read `README.md`, `RED_COWORK_IMPORT.md`, and `documentation/architecture.md` before changing deployment behavior.
-- Reproduce the existing application by installing and building it. Preserve its current design, research content, local images, history and user data. Do not regenerate the application from the product description.
-- The main flow is chat → generate board → quote a block → discuss → explicitly update board. Do not reintroduce the old draft page, pending-task workflow, proactive AI follow-up, direct-edit forms or deleted UI controls.
-- This is a frontend-only demo with preset responses and browser-local storage. It needs no API keys, database, authentication backend or live AI service.
-- Use Node.js 24 and `npm ci`; `npm test` runs the existing suite and `npm run build` produces `dist/`. Retain all local assets and third-party notices. Deploy only the static build output.
+- This is the approved application in the independent `Morii-si/growth-rings-workbench-v45` repository. Release `ui-v45.1` uses package version `0.45.1`. Keep the earlier `ui-v45` tag unchanged. The legacy `Morii-si/growth-rings-workbench` repository is a different publication; do not pull from it, push to it, or substitute its source.
+- Read `README.md`, `RED_COWORK_IMPORT.md`, and `documentation/architecture.md` before deployment changes. Install and build the existing application; preserve its design, approved research content, local images and history.
+- A fresh ordinary visit must immediately show the user-approved complete V3 demonstration: 12 archived exchanges, 11 exchanges containing user messages, and 4 research categories. Do not require visitors to recreate it through four preset questions. Never substitute QA-generated state for the approved archive.
+- The packaged archive is explicitly approved for this public demonstration. Keep unrelated browser exports, recovery backups, unrelated conversations and local machine paths out of the repository.
+- `entry=opening` remains an isolated empty demonstration. Returning to ordinary discussion must restore the complete work. Preserve new browser-local edits, messages and snapshots; initialize idempotently. Legacy migration must match only the exact approved fingerprint and back up the original raw value before replacement. A small message/category count alone never authorizes replacement.
+- The interactive flow remains chat → generate board → quote a block → discuss → explicitly update board. Do not reintroduce draft pages, pending tasks, proactive AI follow-up, direct-edit forms or deleted controls.
+- This is a static frontend with bundled demonstration content, preset responses and browser-local persistence. It needs no backend, database, API keys, authentication service, live AI service, or existing browser storage to display the demonstration.
+- Use Node.js 24 and `npm ci`; `npm test` runs the suite and `npm run build` produces `dist/`. Retain the complete approved demo data, local assets and third-party notices in the static output. Deploy only that output.

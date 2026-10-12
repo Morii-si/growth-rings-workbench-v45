@@ -15,14 +15,17 @@ import {versionNumber,SOURCE,DATA,growth,excluding,questions,latest,initialState
 import {boardPeriod,researchBoard,memoryArchive,contextPreview} from './board.js';
 import {ensureMemory,contextFor,discussionContext,recordDiscussion} from './research-memory.js';
 import {resolveResearchSession,researchSessionLink} from './research-session.js';
+import {loadBundledResearchState} from './bundled-research-demo.js';
 const session=resolveResearchSession(location.href);
 if(session.url!==location.href)replaceAddress(new URL(session.url));
 const KEY=session.key;
 const STORAGE_ERROR='本地保存失败。请导出研究记录，避免关闭页面后丢失。';
-let storageFailed=false;
-let state;try{state=session.entryStarted?initialState():restore(localStorage.getItem(KEY));}catch{state=initialState();}
+const loadedResearch=loadBundledResearchState({key:KEY,isDemo:session.isDemo,entryStarted:session.entryStarted,read:key=>localStorage.getItem(key),write:(key,value)=>localStorage.setItem(key,value)});
+let storageFailed=loadedResearch.persistBlocked;
+let state=loadedResearch.state;
 let variant=new URLSearchParams(location.search).get('view')==='review'?'review':'rail';
 let ui={panel:'chat',history:null,future:false,dataUpdate:false,ruleEditor:false,memoriesOpen:false,annotationTarget:null,annotationText:'',annotationAll:false,annotationContext:null,annotationEditing:null,lastBatch:null,question:1,chart:'excluding',reviewing:false,manual:false,note:'',ask:'',reset:false,source:'annual',ruleDraft:null,editSummary:'',editReason:'',error:'',report:'latest',ipSort:'revenue',memoryFilter:'all',memoryQuery:'',discussionId:null,carry:null,stage:'board',showTimeline:false,assistant:false,focusTopic:new URLSearchParams(location.search).get('topic')||'old',snapshotOpen:false};
+if(loadedResearch.error)ui.error=loadedResearch.error;
 if(state.discussionComposer){ui.annotationText=state.discussionComposer.text||'';ui.annotationTarget=state.discussionComposer.target||null;ui.annotationEditing=state.discussionComposer.editing||null;}
 ensureMemory(state);ensureFollowup(state);
 const route=new URLSearchParams(location.search),requestedVersion=route.get('version');
@@ -44,6 +47,7 @@ const triggeringRule=()=>state.alertRule||state.rule;
 const date=()=>state.period==='interim'?'2026-08-20':'2026-03-25';
 function storageStatus(){return `${ico(storageFailed?'pause':'check')}${storageFailed?'未保存到本机':'本地保存'}`;}
 function persist(){
+ if(loadedResearch.persistBlocked){storageFailed=true;ui.error=loadedResearch.error;return;}
  ensureMemory(state);ensureFollowup(state);
  try{localStorage.setItem(KEY,JSON.stringify(state));storageFailed=false;if(ui.error===STORAGE_ERROR)ui.error='';}
  catch{storageFailed=true;ui.error=STORAGE_ERROR;}

@@ -46,7 +46,8 @@ function openingMessage(){
 export function roundConversation(s){
  const r=roundState(s);r.roundSeedMessages??=[openingMessage()];
  const legacyIds=new Set(['molly','stars','inventory','cash'].map(id=>'round-demo-'+id));
- const legacy=r.roundSeedMessages.filter(message=>message.kind==='demo'&&legacyIds.has(message.id));
+ const bundledIds=new Set(r.bundledReplay?.seedMessageIds||[]);
+ const legacy=r.roundSeedMessages.filter(message=>message.kind==='demo'&&legacyIds.has(message.id)&&!bundledIds.has(message.id));
  if(legacy.length){
   // Retire only known automatic examples. Real input and existing draft/board
   // snapshots remain exactly as saved, including their original demo references.
